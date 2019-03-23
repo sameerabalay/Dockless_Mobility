@@ -11,26 +11,35 @@ and your project proposal will be the README.md file in it.
 
 1. What are you trying to do?  Articulate your objectives using absolutely no jargon (i.e. as if
 you were explaining to a salesperson, executive, or recruiter).
+- What kind of trips are dockless vehicles replacing? Cars/rideshare? Bicycles? Bike Share? Walking? Transit?
+- How do trip patterns/behaviors vary geographically? E.g. are campus trips vs downtown trips vs south congress trips distinct in some way? (Distance, time, origins?)
+
 2. How has this problem been solved before? If you feel like you are addressing a novel
 issue, what similar problems have been solved, and how are you borrowing from those?
+
+
 3. What is new about your approach, why do you think it will be successful?
+
 4. Who cares?  If you're successful, what will the impact be?
+If successful the model will be presented to City of Austin Transportation Department IT staff which they might further present the findings to groups like City of Austin Mobility Committee, City of Austin Compliance Department, AURA 
+
 5. How will you present your work?  
   * Web app - where will you host it, what kind of information will you present?
   * Visualization - what final visuals are you aiming to produce?
   * Presentation - slides, interpretive dance?
+  
 6. What are your data sources? What is the size of your dataset, and what is your storage format?
 
    * Dockless Mobility Data - 2746504 datapoints. City of Austin Dockless Vechicle Trip Data from 2018-04-03 to 2019-02-12
    https://s3.amazonaws.com/sameera-bucket-1/dockless_mobility/raw_data/Austin_Dockless_Vehicle_Trips.csv
-   
-   Original Data was downloaded on 2019-02-12 from https://data.austintexas.gov/Transportation-and-Mobility/Dockless-Vehicle-Trips/7d8e-dm7r 
+    Original Data was downloaded on 2019-02-12 from https://data.austintexas.gov/Transportation-and-Mobility/Dockless-Vehicle-Trips/7d8e-dm7r 
    
    
    * Austin Bergstorm Airport Weather Data - 435 datapoints. Daily weather information at Austin Bergstorm Airport from 2018-01-01 to 2019-03-12       
    https://s3.amazonaws.com/sameera-bucket-1/dockless_mobility/raw_data/Austin_Bergstom_Airport_Weather.csv
 
 7. What are potential problems with your capstone, and what have you done to mitigate these problems?
+
 8. What is the next thing you need to work on?
   * Getting the data, not just some, likely all?
   * Understanding the data?
