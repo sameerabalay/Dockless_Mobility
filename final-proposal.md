@@ -5,6 +5,12 @@
 **Format**: Since you will want a public repo at the end of the project, you should create a git repo, 
 and your project proposal will be the README.md file in it.
 
+### Directory Structure
+* src - directory for all the code
+* data - downloaded data (raw and cleaned)
+* output - results
+* database - database scripts
+
 **Length**: Each of the numbered points should have at a few complete sentences to address them. 
 
 **Include the following**:
@@ -16,9 +22,15 @@ you were explaining to a salesperson, executive, or recruiter).
 
 2. How has this problem been solved before? If you feel like you are addressing a novel
 issue, what similar problems have been solved, and how are you borrowing from those?
+I currently have any not found any prediction algorithms on Dockless Mobility Scooters. I found few research papers on Dockless and Docked Bike Sharing. I'm using the following papers as
+reference
 
+https://www.microsoft.com/en-us/research/wp-content/uploads/2016/07/mobisys16bike.pdf
+
+https://www.researchgate.net/publication/324275044_A_deep_learning_approach_on_short-term_spatiotemporal_distribution_forecasting_of_dockless_bike-sharing_system
 
 3. What is new about your approach, why do you think it will be successful?
+The plan is to apply the ideas from bike sharing systems to Dockless Scooter Data. 
 
 4. Who cares?  If you're successful, what will the impact be?
 
@@ -29,16 +41,16 @@ If successful the model will be presented to City of Austin Transportation Depar
   * Visualization - what final visuals are you aiming to produce?
   * Presentation - slides, interpretive dance?
   
+  Goal is to present the data through Visualization
+  
 6. What are your data sources? What is the size of your dataset, and what is your storage format?
 
    * Dockless Mobility Data - 2746504 datapoints. <a href = "https://s3.amazonaws.com/sameera-bucket-1/dockless_mobility/raw_data/Austin_Dockless_Vehicle_Trips.csv">City of Austin Dockless Vechicle Trip Data from  2018-04-03 to 2019-02-12
-   </a>
-   
-    Original Data was downloaded on 2019-02-12 from https://data.austintexas.gov/Transportation-and-Mobility/Dockless-Vehicle-Trips/7d8e-dm7r 
+   </a>. Original Data was downloaded on 2019-02-12 from City of <a href="https://data.austintexas.gov/Transportation-and-Mobility/Dockless-Vehicle-Trips/7d8e-dm7r"> Austin Data Portal  </a>
    
    
-   * Austin Bergstorm Airport Weather Data - 435 datapoints. Daily weather information at Austin Bergstorm Airport from 2018-01-01 to 2019-03-12       
-   https://s3.amazonaws.com/sameera-bucket-1/dockless_mobility/raw_data/Austin_Bergstom_Airport_Weather.csv
+   * Austin Bergstorm Airport Weather Data - 435 datapoints. Daily weather information at Austin Bergstorm Airport from <a href="https://s3.amazonaws.com/sameera-bucket-1/dockless_mobility/raw_data/Austin_Bergstom_Airport_Weather.csv"> 2018-01-01 to 2019-03-12 </a>. Original Data was downloaded from <a href="http://www.ncdc.noaa.gov">National Oceanic and Atmospheric Adminstration</a>      
+   
 
 7. What are potential problems with your capstone, and what have you done to mitigate these problems?
 
