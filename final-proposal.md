@@ -21,6 +21,7 @@ issue, what similar problems have been solved, and how are you borrowing from th
 3. What is new about your approach, why do you think it will be successful?
 
 4. Who cares?  If you're successful, what will the impact be?
+
 If successful the model will be presented to City of Austin Transportation Department IT staff which they might further present the findings to groups like City of Austin Mobility Committee, City of Austin Compliance Department, AURA 
 
 5. How will you present your work?  
@@ -30,8 +31,9 @@ If successful the model will be presented to City of Austin Transportation Depar
   
 6. What are your data sources? What is the size of your dataset, and what is your storage format?
 
-   * Dockless Mobility Data - 2746504 datapoints. City of Austin Dockless Vechicle Trip Data from 2018-04-03 to 2019-02-12
-   https://s3.amazonaws.com/sameera-bucket-1/dockless_mobility/raw_data/Austin_Dockless_Vehicle_Trips.csv
+   * Dockless Mobility Data - 2746504 datapoints. <a href = "https://s3.amazonaws.com/sameera-bucket-1/dockless_mobility/raw_data/Austin_Dockless_Vehicle_Trips.csv">City of Austin Dockless Vechicle Trip Data from  2018-04-03 to 2019-02-12
+   </a>
+   
     Original Data was downloaded on 2019-02-12 from https://data.austintexas.gov/Transportation-and-Mobility/Dockless-Vehicle-Trips/7d8e-dm7r 
    
    
