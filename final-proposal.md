@@ -20,8 +20,15 @@ issue, what similar problems have been solved, and how are you borrowing from th
   * Visualization - what final visuals are you aiming to produce?
   * Presentation - slides, interpretive dance?
 6. What are your data sources? What is the size of your dataset, and what is your storage format?
-   Dockless Mobility Data - 2746504 datapoints
-   Austin Bergstorm Weather Data - 435 datapoints. Daily weather information from 2018-01-01 to 2019-03-12
+
+   * Dockless Mobility Data - 2746504 datapoints. City of Austin Dockless Vechicle Trip Data from 2018-04-03 to 2019-02-12
+   https://s3.amazonaws.com/sameera-bucket-1/dockless_mobility/raw_data/Austin_Dockless_Vehicle_Trips.csv
+   
+   Original Data was downloaded on 2019-02-12 from https://data.austintexas.gov/Transportation-and-Mobility/Dockless-Vehicle-Trips/7d8e-dm7r 
+   
+   
+   * Austin Bergstorm Airport Weather Data - 435 datapoints. Daily weather information at Austin Bergstorm Airport from 2018-01-01 to 2019-03-12       
+   https://s3.amazonaws.com/sameera-bucket-1/dockless_mobility/raw_data/Austin_Bergstom_Airport_Weather.csv
 
 7. What are potential problems with your capstone, and what have you done to mitigate these problems?
 8. What is the next thing you need to work on?
