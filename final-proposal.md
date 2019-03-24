@@ -91,7 +91,7 @@ Goal is to present the data through Visualization
    * Dockless Mobility Data - Original Data was downloaded on 2019-02-12 from City of <a href="https://data.austintexas.gov/Transportation-and-Mobility/Dockless-Vehicle-Trips/7d8e-dm7r"> Austin Data Portal  </a>. The downloaded <a href = "https://s3.amazonaws.com/sameera-bucket-1/dockless_mobility/raw_data/Austin_Dockless_Vehicle_Trips.csv"> data </a> is for trips from 04-03-2018 to 02-12-2019 and is in csv format and is stored on AWS . The current dataset had 2746504 datapoints.
    
    * Austin Bergstorm Airport Weather Data - Daily weather information (temperature, humidity, wind etc.,) recorded at Austin Bergstorm Airport was downloaded from <a href="http://www.ncdc.noaa.gov"> National Oceanic and Atmospheric Adminstration</a> . The data is in <a href="https://s3.amazonaws.com/sameera-bucket-1/dockless_mobility/raw_data/Austin_Bergstom_Airport_Weather.csv"> csv </a> format and has weather informatin 2018-01-01 to 2019-03-12.  The current dataset has 435 datapoints.
-   
+    
 
 7. What are potential problems with your capstone, and what have you done to mitigate these problems?
    
