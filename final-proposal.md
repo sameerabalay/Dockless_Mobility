@@ -2,7 +2,7 @@
 
 **Purpose**
 
-Micro-Mobility - Small, human or electric-powered transportation market has been on the rise in United States according to Populus report. <a href="https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/micromobilitys-15000-mile-checkup">McKinsey </a> forecasted that micromobility market will be a $200 billion to $300 billion dollar market in United States by 2030. According to the Populus report few of the factors effecting the new micro-mobility trend are GPS-enabled smartphones apps that make it easier to locate the mobility devices and that in many major U.S.cities it is faster to travel short distance of 3 miles or less using an e-scooter or bike than driving a car or using a ride-hailing service. Many cities are still in the midst of developing policies and regulations to handle the rise in micro-mobility transportation.  The reports highlighties three areas where majority of cities will focus policy and regulations on:
+Micro-Mobility - Small, human or electric-powered transportation market has been on the rise in United States according to Populus report because of GPS-enabled smartphones apps that make it easier to locate the mobility devices and that in many major U.S.cities it is faster to travel short distance of 3 miles or less using an e-scooter or bike than driving a car or using a ride-sharing service. <a href="https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/micromobilitys-15000-mile-checkup">McKinsey </a> report forecasted that micromobility market will be a $200 billion to $300 billion dollar market in United States by 2030.  Because of the quick rise in trends and market share many cities are still in the midst of developing policies and regulations. The reports highlighties three areas where majority of cities will focus policy and regulations on:
 
 quote
 
@@ -16,8 +16,7 @@ of way?
 '
 end quote
 
-I have met with City of Austin transportation IT staff and they agreed that City of Austin is also focusing on the above policies and is in the process of updating their policies.  
-
+After initial conversaton with City of Austin transportation IT staff they agreed that City of Austin is also focusing on the above policies and is in the process of updating their current policies to incorporate new findings from different interest groups, studies and citizen feedback.
 
 
 **Format**: Since you will want a public repo at the end of the project, you should create a git repo, 
