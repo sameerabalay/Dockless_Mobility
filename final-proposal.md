@@ -60,8 +60,8 @@ Full set of fields and description can be found at https://data.austintexas.gov/
 
 My goal is to use the data above and weather data to determine :
 
-1. How does distance traveled, start time of the trips, origin and end point vary by geographical location. For example: Do UT campus trips, Downtown trips and South Congress trip differ by time of the day, distance traveled.
-2. Develop a model to predict the number of dockless mobility scooters and usage at give time of the day in a given area (cell). 
+ - How does distance traveled, start time of the trips, origin and end point vary by geographical location. For example: Do UT campus trips, Downtown trips and South Congress trip differ by time of the day, distance traveled.
+ - Develop a model to predict the number of dockless mobility scooters and usage at give time of the day in a given area (cell). 
 
 
 2. How has this problem been solved before? If you feel like you are addressing a novel
