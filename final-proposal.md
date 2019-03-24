@@ -36,11 +36,11 @@ and your project proposal will be the README.md file in it.
 1. What are you trying to do?  Articulate your objectives using absolutely no jargon (i.e. as if
 you were explaining to a salesperson, executive, or recruiter).
 
-City of Austin transportation department updates dockless mobility data they receive from the vendors on their Open Data Portal website every hour. The data contains all the trip information for each dockless mobility device with the exception of trips which meet the following criteria:
+City of Austin transportation department updates their dockless mobility data every hour. The data contains all the trip information for each dockless mobility device with the exception of trips which meet the following criteria:
 - trip distance greater than or equal to .1 miles and less than 500 miles
 - trip duration less than 24 hours
 
-For aggregration purposes they created a citywide hexagonal grid with each edge length of 500ft. Each grid is a cell with a unique id. Each trip has origin cell and destination cell id. Few of the important fields in the dataset are :
+For aggregration purposes they created a citywide hexagonal grid(cell) with each edge of grid of length 500ft. Each grid is a cell with a unique id. Each trip has origin cell and destination cell id. Few of the important fields in the dataset :
 
 - ID - Unique trip identifier
 - Device ID - Unique ID for the device used to complete the trip
@@ -56,9 +56,9 @@ For aggregration purposes they created a citywide hexagonal grid with each edge 
 - End Latitude
 - End Longitude 
 
-For full set of fields and description can be found at https://data.austintexas.gov/Transportation-and-Mobility/Dockless-Vehicle-Trips/7d8e-dm7r
+Full set of fields and description can be found at https://data.austintexas.gov/Transportation-and-Mobility/Dockless-Vehicle-Trips/7d8e-dm7r
 
-My goal is to use this data above and weather data to determine :
+My goal is to use the data above and weather data to determine :
 
 1. How does distance traveled, start time of the trips, origin and end point vary by geographical location. For example: Do UT campus trips, Downtown trips and South Congress trip differ by time of the day, distance traveled.
 2. Develop a model to predict the number of dockless mobility scooters and usage at give time of the day in a given area (cell). 
@@ -66,25 +66,25 @@ My goal is to use this data above and weather data to determine :
 
 2. How has this problem been solved before? If you feel like you are addressing a novel
 issue, what similar problems have been solved, and how are you borrowing from those?
-I have not come across any prediction models on dockless mobility scooter but found few research papers on Dockless and Docked Bike Sharing prediction models. My goal is to use the following papers for reference:
+I have not come across any prediction models on dockless mobility scooter but found few research papers on Dockless and Docked Bike Sharing prediction models. My goal is to use the following papers for reference for my model:
 
 https://www.microsoft.com/en-us/research/wp-content/uploads/2016/07/mobisys16bike.pdf
 
 https://www.researchgate.net/publication/324275044_A_deep_learning_approach_on_short-term_spatiotemporal_distribution_forecasting_of_dockless_bike-sharing_system
 
 3. What is new about your approach, why do you think it will be successful?
-My plan is to apply the modeling done in the referenced papers to dockless scooters.
+My plan is to apply the modeling done in the referenced papers and apply it to dockless scooters. As part of feature selection I'm planning to add temperature, humidity and wind features to the model. I would like to investigate few peak events like ACL and SXSW and see if they can be added as additional features.
 
 4. Who cares?  If you're successful, what will the impact be?
 
-If successful the model will be presented to City of Austin Transportation Department IT staff which then further might be groups like City of Austin Mobility Committee, City of Austin Compliance Department, AURA to help implement new policies and regulations.
+If successful the model will be presented to City of Austin Transportation Department IT staff which then further might be presented to groups like City of Austin Mobility Committee, City of Austin Compliance Department, AURA to help implement new policies and regulations.
 
 5. How will you present your work?  
   * Web app - where will you host it, what kind of information will you present?
   * Visualization - what final visuals are you aiming to produce?
   * Presentation - slides, interpretive dance?
   
-Goal is to present the data through Visualization
+Goal is to present the data through Visualizations/
   
 6. What are your data sources? What is the size of your dataset, and what is your storage format?
 
