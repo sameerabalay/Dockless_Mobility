@@ -2,32 +2,32 @@
 
 **Purpose**
 
-Micro-Mobility - Small, human or electric-powered transportation market has been on the rise in United States according to Populus report. One of the main reason for this rise is attributed to the fact that traveling a short distance of 3 miles or less in many major U.S.cities is faster through e-scooters or bikes than driving a car or using a ride-sharing service. <a href="https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/micromobilitys-15000-mile-checkup">McKinsey </a> report forecasted that micromobility market will be a $200 billion to $300 billion dollar market in United States by 2030. Because of the quick rise in trends and market share many cities are still in the midst of developing policies and regulations. The reports highlighties three areas where majority of cities will focus policy and regulations on:
+     Micro-Mobility - Small, human or electric-powered transportation market has been on the rise in United States according to Populus report. One of the main reason for this rise is attributed to the fact that traveling a short distance of 3 miles or less in many major U.S.cities is faster through e-scooters or bikes than driving a car or using a ride-sharing service. <a href="https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/micromobilitys-15000-mile-checkup">McKinsey </a> report forecasted that micromobility market will be a $200 billion to $300 billion dollar market in United States by 2030. Because of the quick rise in trends and market share many cities are still in the midst of developing policies and regulations. The reports highlighties three areas where majority of cities will focus policy and regulations on:
 
-quote
+     quote
 
-'
-1. Ensuring safety: What policies should be enacted to ensure the safety of riders and others using public space (e.g., streets and sidewalks)? What transportation planning and design modifications are possible to promote the safety of those
-using shared and personal micro-mobility options and others in the public right
-of way?
-2. Promoting equitable access to services: Are micro-mobility services accessible, and being utilized, by a broad segment of the population? If not, how can the city support expanding access to disadvantaged populations?
-3. Evaluating impacts on traffic and sustainability: How do micro-mobility services fit into the broader transportation ecosystem? Are they reducing vehicle trips? How many micro-mobility vehicles can the residents of a city effectively utilize?
+     '
+     1. Ensuring safety: What policies should be enacted to ensure the safety of riders and others using public space (e.g., streets and sidewalks)? What transportation planning and design modifications are possible to promote the safety of those
+     using shared and personal micro-mobility options and others in the public right
+     of way?
+     2. Promoting equitable access to services: Are micro-mobility services accessible, and being utilized, by a broad segment of the population? If not, how can the city support expanding access to disadvantaged populations?
+     3. Evaluating impacts on traffic and sustainability: How do micro-mobility services fit into the broader transportation ecosystem? Are they reducing vehicle trips? How many micro-mobility vehicles can the residents of a city effectively utilize?
 
-'
-end quote
+     '
+     end quote
 
-After initial conversaton with City of Austin transportation IT staff they agreed that City of Austin is also focusing on the above policies and is in the process of updating their current policies to incorporate new findings from different interest groups, studies and citizen feedback. My goal is to present my analysis to the City of Austin transportation department so they can then present to groups working on Micro-mobility policy and regulations.
+     After initial conversaton with City of Austin transportation IT staff they agreed that City of Austin is also focusing on the above policies and is in the process of updating their current policies to incorporate new findings from different interest groups, studies and citizen feedback. My goal is to present my analysis to the City of Austin transportation department so they can then present to groups working on Micro-mobility policy and regulations.
 
 
 **Format**: Since you will want a public repo at the end of the project, you should create a git repo, 
 and your project proposal will be the README.md file in it.
 
 ### Directory Structure
-* src - directory for all the code
-* data - downloaded data (raw and cleaned)
-* output - results
-* database - database scripts
-* documents - documents used for analysis and research
+    * src - directory for all the code
+    * data - downloaded data (raw and cleaned)
+    * output - results
+    * database - database scripts
+    * documents - documents used for analysis and research
 
 **Length**: Each of the numbered points should have at a few complete sentences to address them. 
 
@@ -36,32 +36,32 @@ and your project proposal will be the README.md file in it.
 1. What are you trying to do?  Articulate your objectives using absolutely no jargon (i.e. as if
 you were explaining to a salesperson, executive, or recruiter).
 
-    City of Austin transportation department updates their dockless mobility data every hour on City of Austin Open Data Portal. The data contains all the trip information for each dockless mobility device with the exception of trips which meet the following criteria:
-    - trip distance greater than or equal to .1 miles and less than 500 miles
-    - trip duration less than 24 hours
+     City of Austin transportation department updates their dockless mobility data every hour on City of Austin Open Data Portal. The data contains all the trip information for each dockless mobility device with the exception of trips which meet the following criteria:
+     - trip distance greater than or equal to .1 miles and less than 500 miles
+     - trip duration less than 24 hours
 
-    For aggregration purposes they created a citywide hexagonal grid(cell) with each edge of grid of length 500ft. Each grid is a cell with a unique id. Each trip has origin cell and destination cell id. Few of the important fields in the dataset :
+     For aggregration purposes they created a citywide hexagonal grid(cell) with each edge of grid of length 500ft. Each grid is a cell with a unique id. Each trip has origin cell and destination cell id. Few of the important fields in the dataset :
 
-    - ID - Unique trip identifier
-    - Device ID - Unique ID for the device used to complete the trip
-    - Vechile Type - Bicycle or Scooter
-    - Trip Duration - In seconds
-    - Trip Distance - In meters
-    - Start Time - Datetime at which the trip started in local time
-    - End Time - Datetime at which the trip ended in local time
-    - Origin Cell ID 
-    - Destination Cell ID
-    - Start Latitude
-    - Start Longitude
-    - End Latitude
-    - End Longitude 
+     - ID - Unique trip identifier
+     - Device ID - Unique ID for the device used to complete the trip
+     - Vechile Type - Bicycle or Scooter
+     - Trip Duration - In seconds
+     - Trip Distance - In meters
+     - Start Time - Datetime at which the trip started in local time
+     - End Time - Datetime at which the trip ended in local time
+     - Origin Cell ID 
+     - Destination Cell ID
+     - Start Latitude
+     - Start Longitude
+     - End Latitude
+     - End Longitude 
 
-     Full set of fields and description can be found at https://data.austintexas.gov/Transportation-and-Mobility/Dockless-Vehicle-Trips/7d8e-dm7r
+      Full set of fields and description can be found at https://data.austintexas.gov/Transportation-and-Mobility/Dockless-Vehicle-Trips/7d8e-dm7r
 
-     My goal is to use the data above and weather data to determine :
+      My goal is to use the data above and weather data to determine :
 
-      - How does distance traveled, start time of the trips, origin and end point vary by geographical location. For example: Do UT campus trips, Downtown trips and South Congress trip differ by time of the day, distance traveled.
-      - Develop a model to predict the number of dockless mobility scooters and usage at give time of the day in a given area (cell). 
+       - How does distance traveled, start time of the trips, origin and end point vary by geographical location. For example: Do UT campus trips, Downtown trips and South Congress trip differ by time of the day, distance traveled.
+       - Develop a model to predict the number of dockless mobility scooters and usage at give time of the day in a given area (cell). 
 
 
 2. How has this problem been solved before? If you feel like you are addressing a novel
