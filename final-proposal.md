@@ -1,6 +1,15 @@
  # Final Proposal Specifications
 
-**Purpose**: Begin to organize actual capstone project.
+**Purpose**: 
+
+Micro-Mobility - Small, human or electric-powered transportation market has been on the rise according to Populus report.  According to <a href="">McKinsey forecasting report </a> micromobility market will be a $200 billion to $300 billion dollar market in United States by 2030. Key takeaways from Populus are 
+"The adoption of new mobility services is accelerating and becoming ubiquitous. Cities must plan for them." 
+"Micro-mobility services could provide cities with the public support they need to develop better active transportation infrastructure."
+
+According to the report "The explosion of electric scooter services in the United States in 2018 took many by surprise - both in the public and private sectors. While many cities are working to determine how to develop policies and frameworks for managing this latest wave of transportation innovation" and city of Austin is currently working on enhancing their dockless mobility policies and frameworks
+
+
+
 
 **Format**: Since you will want a public repo at the end of the project, you should create a git repo, 
 and your project proposal will be the README.md file in it.
@@ -17,6 +26,11 @@ and your project proposal will be the README.md file in it.
 
 1. What are you trying to do?  Articulate your objectives using absolutely no jargon (i.e. as if
 you were explaining to a salesperson, executive, or recruiter).
+City of Austin transportation department publishes every hour dockless mobility data they receive from the vendors on their Open Data Portal website. 
+
+My goal is to use this data to determine 
+1. How does distance traveled, start time of the trips, origin and end point vary by geographical location. For example: Do UT campus trips, Downtown trips and South Congress trip    
+
 - What kind of trips are dockless vehicles replacing? Cars/rideshare? Bicycles? Bike Share? Walking? Transit?
 - How do trip patterns/behaviors vary geographically? E.g. are campus trips vs downtown trips vs south congress trips distinct in some way? (Distance, time, origins?)
 
