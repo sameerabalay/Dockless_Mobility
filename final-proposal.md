@@ -2,7 +2,7 @@
 
 **Purpose**
 
-Micro-Mobility - Small, human or electric-powered transportation market has been on the rise in United States according to Populus report because of GPS-enabled smartphones apps that make it easier to locate the mobility devices and that in many major U.S.cities it is faster to travel short distance of 3 miles or less using an e-scooter or bike than driving a car or using a ride-sharing service. <a href="https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/micromobilitys-15000-mile-checkup">McKinsey </a> report forecasted that micromobility market will be a $200 billion to $300 billion dollar market in United States by 2030.  Because of the quick rise in trends and market share many cities are still in the midst of developing policies and regulations. The reports highlighties three areas where majority of cities will focus policy and regulations on:
+Micro-Mobility - Small, human or electric-powered transportation market has been on the rise in United States according to Populus report. One of the main reason for this rise is attributed to the fact that traveling a short distance of 3 miles or less in many major U.S.cities is faster through e-scooters or bikes than driving a car or using a ride-sharing service. <a href="https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/micromobilitys-15000-mile-checkup">McKinsey </a> report forecasted that micromobility market will be a $200 billion to $300 billion dollar market in United States by 2030. Because of the quick rise in trends and market share many cities are still in the midst of developing policies and regulations. The reports highlighties three areas where majority of cities will focus policy and regulations on:
 
 quote
 
@@ -16,7 +16,7 @@ of way?
 '
 end quote
 
-After initial conversaton with City of Austin transportation IT staff they agreed that City of Austin is also focusing on the above policies and is in the process of updating their current policies to incorporate new findings from different interest groups, studies and citizen feedback.
+After initial conversaton with City of Austin transportation IT staff they agreed that City of Austin is also focusing on the above policies and is in the process of updating their current policies to incorporate new findings from different interest groups, studies and citizen feedback. My goal is to present my analysis to the City of Austin transportation department so they can then present to groups working on Micro-mobility policy and regulations.
 
 
 **Format**: Since you will want a public repo at the end of the project, you should create a git repo, 
@@ -36,7 +36,7 @@ and your project proposal will be the README.md file in it.
 1. What are you trying to do?  Articulate your objectives using absolutely no jargon (i.e. as if
 you were explaining to a salesperson, executive, or recruiter).
 
-City of Austin transportation department updates their dockless mobility data every hour. The data contains all the trip information for each dockless mobility device with the exception of trips which meet the following criteria:
+City of Austin transportation department updates their dockless mobility data every hour on City of Austin Open Data Portal. The data contains all the trip information for each dockless mobility device with the exception of trips which meet the following criteria:
 - trip distance greater than or equal to .1 miles and less than 500 miles
 - trip duration less than 24 hours
 
@@ -110,3 +110,5 @@ Goal is to present the data through Visualizations/
 
 **Submission**: Once you are satisfied with your submission, push it to github, and send the repo URL to your
 instructors via slack.
+
+#### References
