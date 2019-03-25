@@ -36,6 +36,11 @@ and your project proposal will be the README.md file in it.
 1. What are you trying to do?  Articulate your objectives using absolutely no jargon (i.e. as if
 you were explaining to a salesperson, executive, or recruiter).
 
+   My goal is to use the data above and weather data to determine :
+
+   - How does distance traveled, start time of the trips, origin and end point vary by geographical location. For example: Do UT campus trips, Downtown trips and South Congress trip differ by time of the day, distance traveled.
+   - Develop a model to predict the number of dockless mobility scooters and usage at give time of the day in a given area (cell). 
+
    City of Austin transportation department updates their dockless mobility data every hour on City of Austin Open Data Portal. The data contains all the trip information for each dockless mobility device with the exception of trips which meet the following criteria:
      - trip distance greater than or equal to .1 miles and less than 500 miles
      - trip duration less than 24 hours
@@ -58,10 +63,7 @@ you were explaining to a salesperson, executive, or recruiter).
 
    Full set of fields and description can be found at https://data.austintexas.gov/Transportation-and-Mobility/Dockless-Vehicle-Trips/7d8e-dm7r
 
-   My goal is to use the data above and weather data to determine :
 
-   - How does distance traveled, start time of the trips, origin and end point vary by geographical location. For example: Do UT campus trips, Downtown trips and South Congress trip differ by time of the day, distance traveled.
-   - Develop a model to predict the number of dockless mobility scooters and usage at give time of the day in a given area (cell). 
 
 
 2. How has this problem been solved before? If you feel like you are addressing a novel
