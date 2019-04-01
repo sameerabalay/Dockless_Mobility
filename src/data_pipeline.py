@@ -11,7 +11,22 @@ def dockless_data_pipeline(data, columns_to_drop):
     """
     '''
 
-    data.drop(columns_to_drop, axis=1, inplace=True)
+    '''
+    Initial Analysis of the Scooter Data revealed that are 46695 rows are null out of 2746505 rows. 
+    Out of them 2088 of them have either Origin Cell ID or Destination Cell ID has 'OUT_OF_BOUNDS' 
+    value. I will be follow up with City of Austin transportation department regarding null values. 
+    For the first pass I will be deleting all the rows which have 'OUT_OF_BOUNDS' in the Origin or 
+    Destination Cell ID as it is required for the data analysis
+    '''
+    data.drop(data.index[(data['Origin Cell ID'] == 'OUT_OF_BOUNDS') 
+                          | (data['Destination Cell ID'] == 'OUT_OF_BOUNDS')], inplace = True)
+    data.drop(data.index[(data['Vehicle Type'] != 'scooter')], inplace = True)
+    data.drop(data.index[(data['Origin Cell ID'].isnull()) | (data['Destination Cell ID'].isnull())], inplace = True)
+    data.drop(data.index[(data['Start Latitude'].isnull()) | (data['End Latitude'].isnull())], inplace = True)
+    
+    # After all the null data removal drop the columns which are not required
+    mobility_columns_to_drop = ['ID', 'Device ID', 'Vehicle Type', 'Modified Date']
+    data.drop(mobility_columns_to_drop, axis=1, inplace=True)
 
     return data
 
