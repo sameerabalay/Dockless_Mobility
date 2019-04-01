@@ -18,6 +18,11 @@ def dockless_data_pipeline(data, columns_to_drop):
     For the first pass I will be deleting all the rows which have 'OUT_OF_BOUNDS' in the Origin or 
     Destination Cell ID as it is required for the data analysis
     '''
+    '''
+    Remove all the data that is not Scooter data.
+    Remove all the data which does not have Origin Cell ID or Destination Cell ID
+    Remove all the data 
+    '''
     data.drop(data.index[(data['Origin Cell ID'] == 'OUT_OF_BOUNDS') 
                           | (data['Destination Cell ID'] == 'OUT_OF_BOUNDS')], inplace = True)
     data.drop(data.index[(data['Vehicle Type'] != 'scooter')], inplace = True)
@@ -26,6 +31,26 @@ def dockless_data_pipeline(data, columns_to_drop):
     
     # After all the null data removal drop the columns which are not required
     mobility_columns_to_drop = ['ID', 'Device ID', 'Vehicle Type', 'Modified Date']
+
+    # Convert the datetime columns
+    data['Start Time'] = data['Start Time'].apply(lambda x: dt.datetime.strptime(x,'%m/%d/%Y %I:%M:%S %p'))
+    data['End Time'] = data['End Time'].apply(lambda x: dt.datetime.strptime(x,'%m/%d/%Y %I:%M:%S %p'))
+
+    # Create START_DATE and END_DATE so they can be merged with Weather Data
+    data['START_DATE'] = data['Start Time'].dt.date
+    data['END_DATE'] = data['End Time'].dt.date
+
+    # Convert the month, hour, Day of Week, Council District(Start, End), Year to integers instead of floats
+    int_columns = ['Month', 'Hour', 'Day of Week', 'Council District (Start)', 'Council District (End)', 'Year']
+    data[int_columns] = data[int_columns].astype(int)
+
+    '''
+    Trip duration - UOM in seconds, Trip distance - UOM in meters, 
+    Month - where 1 = January, etc., 
+    Hour - The hour of the day during which trip occurred, in local time (US/Central), 
+    Day of Week - where Sunday = 0, and so on,¶
+    '''
+
     data.drop(mobility_columns_to_drop, axis=1, inplace=True)
 
     return data
@@ -58,4 +83,14 @@ def weather_data_pipeline(data):
     # the previous record.
     # Fill the data from the previous record using 'ffill' method on pandas dataframe
     data.fillna(method='ffill', inplace=True)
+    data.rename(columns={'AWND': 'AVG_DAILY_WIND_SPEED', 'PRCP': 'PRECIPITATION','TAVG': 'AVG_TEMPERATURE', 'TMAX': 'MAX_TEMPERATURE','TMIN': 'MIN_TEMPERATURE' }, inplace=True)
+    # Convert the date in weather dataframe to datetime object
+
+    data['DATE'] = data['DATE'].apply(lambda x: dt.datetime.strptime(x,'%Y-%m-%d'))
+    '''
+    Weather Data Details. Precipitation - Units of Measure -  inches, 
+    Snow - Units of Measure - inches, 
+    Avg_Daily_Wind_Speed - Units of Measure - MPH, 
+    AVG_TEMPERATURE, MAX_TEMPERATURE, MIN_TEMPERATURE- Units of Measure - Degrees Fahrenheit
+    '''
     return data
