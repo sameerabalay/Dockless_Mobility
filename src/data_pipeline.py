@@ -1,6 +1,7 @@
 import pandas as pd
+import datetime as dt
 
-def dockless_data_pipeline(data, columns_to_drop):
+def dockless_data_pipeline(data):
     '''
     Take a pandas dataframe and construct the data as part of the pipeline for dockless scooter data
         Arguments:
@@ -94,3 +95,25 @@ def weather_data_pipeline(data):
     AVG_TEMPERATURE, MAX_TEMPERATURE, MIN_TEMPERATURE- Units of Measure - Degrees Fahrenheit
     '''
     return data
+
+if __name__ == '__main__':
+    # Read the dockless data from S3 bucket
+    # Load the data and and call the clean method automatically to call the work flow
+    dockless_data = pd.read_csv("https://s3.amazonaws.com/sameera-bucket-1/dockless_mobility/raw_data/Austin_Dockless_Vehicle_Trips.csv")
+    dockless_vehicles_columns = dockless_data.columns
+    print_eda_stats(dockless_data, dockless_vehicles_columns, "Austin Dockless Mobility Data")
+    # Call the dockless_data_pipeline()
+    dockless_data_pipeline(dockless_data)
+    dockless_vehicles_columns = dockless_data.columns
+    print_eda_stats(dockless_data, dockless_vehicles_columns, "Austin Dockless Mobility Data")
+
+    #Read the weather data from S3 bucket
+    weather_data = pd.read_csv("https://s3.amazonaws.com/sameera-bucket-1/dockless_mobility/raw_data/Austin_Bergstom_Airport_Weather.csv")
+    weather_columns = weather_data.columns
+    print_eda_stats(weather_data, weather_columns, "Austin Weather Data")
+    weather_data_pipeline(weather_data)
+    weather_columns = weather_data.columns
+    print_eda_stats(weather_data, weather_columns, "Austin Weather Data")
+
+
+
