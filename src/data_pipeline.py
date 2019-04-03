@@ -88,6 +88,8 @@ def weather_data_pipeline(data):
     # Convert the date in weather dataframe to datetime object
 
     data['DATE'] = data['DATE'].apply(lambda x: dt.datetime.strptime(x,'%Y-%m-%d'))
+    # Convert it to Date
+    data['DATE'] = data['DATE'].dt.date
     '''
     Weather Data Details. Precipitation - Units of Measure -  inches, 
     Snow - Units of Measure - inches, 
