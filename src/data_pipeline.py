@@ -45,6 +45,8 @@ def dockless_data_pipeline(data):
     int_columns = ['Month', 'Hour', 'Day of Week', 'Council District (Start)', 'Council District (End)', 'Year']
     data[int_columns] = data[int_columns].astype(int)
 
+    data['count'] = 1
+
     '''
     Trip duration - UOM in seconds, Trip distance - UOM in meters, 
     Month - where 1 = January, etc., 
