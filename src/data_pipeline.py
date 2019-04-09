@@ -113,6 +113,10 @@ def find_top_group_by_column_list(data, group_by_column, sort_by_column, agg_col
     top_10_origin_cells_list = top_10_origin_cells.tolist()
     return top_10_origin_cells_list
 
+def remove_invalid_trips(dockless_data):
+    dockless_data = dockless_data[(dockless_data['Trip Distance'] > 1609.34) & (dockless_data['Trip Distance'] < 804673)]
+    dockless_data = dockless_data[(dockless_data['Trip Duration'] > 60) & (dockless_data['Trip Duration'] < 86400)]
+    return dockless_data
 
 def prepare_cell_data(dockless_data, weather_data, cell_id):
     origin_cell_data = dockless_data[['Origin Cell ID', 'count']]
@@ -156,7 +160,7 @@ def prepare_cell_data(dockless_data, weather_data, cell_id):
     data_cell_data_hour = data_cell_data_hour.drop(['DATE'], axis=1)
 
 
-    return 
+    return data_cell_data_hour
 
 if __name__ == '__main__':
     # Read the dockless data from S3 bucket
