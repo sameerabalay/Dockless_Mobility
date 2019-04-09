@@ -114,7 +114,7 @@ def find_top_group_by_column_list(data, group_by_column, sort_by_column, agg_col
     return top_10_origin_cells_list
 
 def remove_invalid_trips(dockless_data):
-    dockless_data = dockless_data[(dockless_data['Trip Distance'] > 1609.34) & (dockless_data['Trip Distance'] < 804673)]
+    dockless_data = dockless_data[(dockless_data['Trip Distance'] > 160.934) & (dockless_data['Trip Distance'] < 804673)]
     dockless_data = dockless_data[(dockless_data['Trip Duration'] > 60) & (dockless_data['Trip Duration'] < 86400)]
     return dockless_data
 
