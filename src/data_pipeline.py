@@ -140,7 +140,7 @@ def prepare_cell_data(dockless_data, weather_data, cell_id):
     trip_counts_cell_data = trip_counts_cell_data[(trip_counts_cell_data.index > '2018-07-15')]
     trip_counts_cell_data = trip_counts_cell_data[(trip_counts_cell_data.index < '2019-01-15')]
 
-    data_cell_data_hour = trip_counts_cell_data.resample('H', how='sum')
+    data_cell_data_hour = trip_counts_cell_data.resample('H').sum()
     data_cell_data_hour = data_cell_data_hour.fillna(0)
 
     # Do the resampling before you add all the features
