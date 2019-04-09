@@ -55,7 +55,7 @@ def dockless_data_pipeline(data):
     '''
 
     data.drop(mobility_columns_to_drop, axis=1, inplace=True)
-
+    data = data.set_index('Start Time')
     return data
 
 def weather_data_pipeline(data):
@@ -98,7 +98,65 @@ def weather_data_pipeline(data):
     Avg_Daily_Wind_Speed - Units of Measure - MPH, 
     AVG_TEMPERATURE, MAX_TEMPERATURE, MIN_TEMPERATURE- Units of Measure - Degrees Fahrenheit
     '''
+    data.set_index('DATE')
+    #data = data.drop(['index'], axis=1)
     return data
+
+def find_top_group_by_column_list(data, group_by_column, sort_by_column, agg_column, n=10):
+    grouped_origin_cell_id = data.groupby([group_by_column]).agg(agg_column)
+    grouped_origin_cell_id = grouped_origin_cell_id.sort_values([sort_by_column], ascending=False)
+    top_origin_cell_ids = grouped_origin_cell_id[sort_by_column]
+    top_origin_cell_ids = top_origin_cell_ids.to_frame().reset_index()
+    top_n_origin_cells = top_origin_cell_ids.head(n)
+    top_10_origin_cells = top_n_origin_cells[0:n]
+    top_10_origin_cells = top_10_origin_cells[group_by_column].values
+    top_10_origin_cells_list = top_10_origin_cells.tolist()
+    return top_10_origin_cells_list
+
+
+def prepare_cell_data(dockless_data, weather_data, cell_id):
+    origin_cell_data = dockless_data[['Origin Cell ID', 'count']]
+
+    # Hardcoded Cell ID '014391'
+    ind_cell_data = origin_cell_data[origin_cell_data['Origin Cell ID'] == cell_id]
+
+    trip_counts_cell = ind_cell_data.groupby([ind_cell_data.index.get_level_values(0),'Origin Cell ID']).count()
+    trip_counts_cell = trip_counts_cell.unstack(level=1)
+    trip_counts_cell = trip_counts_cell.fillna(0)
+
+    # # Make a regular dataframe for processing the Time Series
+    t2 = trip_counts_cell.reset_index()['count']
+    # Hardcoded Cell ID '014391'
+    counts = t2[cell_id].values
+    data = {'Start Time':trip_counts_cell.index.values, 'Trip Counts':counts} 
+    trip_counts_cell_data = pd.DataFrame(data)
+    trip_counts_cell_data = trip_counts_cell_data.set_index("Start Time")
+
+    # Remove the data which is inconsistent 
+    trip_counts_cell_data = trip_counts_cell_data[(trip_counts_cell_data.index > '2018-07-15')]
+    trip_counts_cell_data = trip_counts_cell_data[(trip_counts_cell_data.index < '2019-01-15')]
+
+    data_cell_data_hour = trip_counts_cell_data.resample('H', how='sum')
+    data_cell_data_hour = data_cell_data_hour.fillna(0)
+
+    # Do the resampling before you add all the features
+
+    data_cell_data_hour['MONTH'] = pd.DatetimeIndex(data_cell_data_hour.index).month
+    data_cell_data_hour['YEAR'] = pd.DatetimeIndex(data_cell_data_hour.index).year
+    data_cell_data_hour['HOUR'] = pd.DatetimeIndex(data_cell_data_hour.index).hour
+    data_cell_data_hour['DAY'] = pd.DatetimeIndex(data_cell_data_hour.index).day
+    data_cell_data_hour['WEEK'] = pd.DatetimeIndex(data_cell_data_hour.index).week
+    data_cell_data_hour['DAY_OF_WEEK'] = pd.DatetimeIndex(data_cell_data_hour.index).weekday
+    data_cell_data_hour['WEEKEND'] = ((pd.DatetimeIndex(data_cell_data_hour.index).weekday) // 5 == 1).astype(float)
+    data_cell_data_hour['WEEKDAY'] = ((pd.DatetimeIndex(data_cell_data_hour.index).weekday) // 5 == 0).astype(float)
+    data_cell_data_hour['DATE'] = pd.DatetimeIndex(data_cell_data_hour.index).date
+    hours=[0, 6, 10, 15, 19, 23]
+    data_cell_data_hour['HOUR_LABEL'] = pd.cut(data_cell_data_hour['HOUR'], hours, include_lowest=True, right=True, labels=['0', '1', '2', '3', '4'])
+    data_cell_data_hour = data_cell_data_hour.reset_index().merge(weather_data, on='DATE', how="left").set_index('Start Time')
+    data_cell_data_hour = data_cell_data_hour.drop(['DATE'], axis=1)
+
+
+    return 
 
 if __name__ == '__main__':
     # Read the dockless data from S3 bucket
