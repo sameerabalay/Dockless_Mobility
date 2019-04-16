@@ -75,20 +75,41 @@ Weather Forwarding fill
 Form Hypotheses about your defined problem by visually analyzing the data 
 
 ## Feature Engineering
-After Data Exploration it was evident that 
+After Data Exploration it was evident that having weather and time of the day are important features to add to the model. The following fields were added as features:  
 
-
+     - Hour - Hour at which the ride originated. (0-23hrs)
+     - Hour Label - Grouping of hours 
+          |Labe|Hours|
+          |Morning|Midnight-5:59am|
+          |Morning Commute|6am-9:59am|
+          |Afternoon|10am-2:59pm|
+          |Evening Commute|3pm-7:59pm|
+          |Night|8pm-11:59pm|
+     - Day of the Week - Monday(0), Tuesday(1), Wednesday(2), Thursday(3), Friday(4), Saturday(5), Sunday(6)
+     - Week - Week of the year (0-51)
+     - Weekday - Boolean (1 for Monday - Friday)
+     - Weekend - Boolean (1 for Saturday and Sunday)
+     - Month - Month of the year (January(0) - December(11))
+     - Day - Day of the month (0-31)
+     - Year - Year of the day (2018, 2019 etc.,)
+     - Precipitation - Precipitation in inches
+     - Snow - Units of Measure in inches
+     - Avg_Daily_Wind_Speed - Units of Measure in mph
+     - AVG_TEMPERATURE - Units of Measure in Degrees Fahrenheit
+     - MAX_TEMPERATURE - Units of Measure in Degrees Fahrenheit
+     - MIN_TEMPERATURE - Units of Measure in Degrees Fahrenheit
 
 ## Predictive Modeling
 Traditional Time Series Models ARIMA-Moving Average, ARIMA-Auto Regressor, SARIMA, RandomForestRegressor and ADABoostRegressor models were used for doing the predictive modeling. All the models were run on the top 10 cells (regions) with most rides and with Mean Absolute Error as the error metric. I used Mean Absolute Error(MAE) as the error metric instead of Root Mean Square Error(RMSE) because RMSE gives relatively high weights to large errors which in my cases mostly were mostly related to the outliers.
 
-Performance of the models
+**Performance of the models**
+  
 | Models | Mean Absolute Error (MAE) |
 | --- | --- |
 | ARIMA - Moving Average | 4.167 |
 | ARIMA - Auto Regressor | 4.172 |
 | SARIMA | 8.010 |
-| **RandomForestRegressor** | **3.863** |
+| *RandomForestRegressor* | *3.863* |
 | AdaBoostRegressot | 4.680 |
 
   
