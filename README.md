@@ -1,9 +1,7 @@
 # Dockless Scooter Rides Prediction
 Predict the number of scooter rides originating in a region(cell) in City of Austin
 
-
-### Business Understanding
-<div class="text-justify">
+## Business Understanding
   
 Micro-Mobility - Small, human or electric-powered transportation market forecasted by McKinsey report to be $200 - $300 billion dollar market by 2030 in United States alone has been on the rise. One of the main reason for this rise is attributed to the fact that traveling a short distance of 3 miles or less in many major U.S.cities is faster through e-scooters or bikes than driving a car or using a ride-sharing service. Because of the quick rise in trends and market share many cities are still in the midst of developing policies and regulations. Populus report highlighties three areas where majority of cities will focus policy and regulations on:
      
@@ -12,10 +10,8 @@ Micro-Mobility - Small, human or electric-powered transportation market forecast
  > 3. Evaluating impacts on traffic and sustainability: How do micro-mobility services fit into the broader transportation ecosystem? Are they reducing vehicle trips? How many micro-mobility vehicles can the residents of a city effectively utilize?
 
 City of Austin transportation IT staff agree that City of Austin is also focusing on the above policies and is in the process of updating their current policies to incorporate new findings from different interest groups, studies and citizen feedback. My goal is to present my analysis to the City of Austin transportation department so they can then present to groups working on Micro-mobility policy and regulations.
-
-</div>
-
-### Technology Stack
+  
+## Technology and Software Packages
 <img src="documents/images/technology_stack.png"
      alt="Technology Stack"
      style="float: left; margin-right: 10px;" />
@@ -26,13 +22,13 @@ City of Austin transportation IT staff agree that City of Austin is also focusin
     * output - results
     * documents - documents used for analysis and research
     
-### Data Sources
+## Data Sources
 City of Austin Open Data Portal Dockless Mobility Data 
 Daily Weather from National Centers for Environmental Information (NCEI) - Austin Bergstrom Airport Weather Station
 
-#### Data Format
+### Data Format
 
-##### Dockless Mobility Data
+#### Dockless Mobility Data
 City of Austin transportation department updates their dockless mobility data every hour on their Open Data Portal. For aggregration purposes they created a citywide hexagonal grid(cell) with each edge of grid of length 500ft. Each grid is a cell with a unique id.  Full set of fields and description can be found at https://data.austintexas.gov/Transportation-and-Mobility/Dockless-Vehicle-Trips/7d8e-dm7r  
   
 Each trip has origin cell and destination cell id. Few of the important fields in the dataset :
@@ -51,8 +47,10 @@ Each trip has origin cell and destination cell id. Few of the important fields i
      - End Latitude
      - End Longitude 
 
-##### Weather Data
-Aggregrated daily weather data was downloaded from NCEI recorded at Austin Bergstorm International Airport Weather Station. Full details of the fields are available at <a href="documents/Weather_GHCND_documentation.pdf">Weather_GHCND_documentation.pdf</a>Few of the important fields in the dataset:
+#### Weather Data
+Aggregrated daily weather data was downloaded from NCEI recorded at Austin Bergstorm International Airport Weather Station. Full details of the fields are available at <a href="documents/Weather_GHCND_documentation.pdf">Weather Documentation</a>  
+
+Few of the important fields in the dataset:
 
      - Date - Recorded Date
      - Precipitation - Units of Measure -  inches
@@ -62,21 +60,30 @@ Aggregrated daily weather data was downloaded from NCEI recorded at Austin Bergs
      - MAX_TEMPERATURE - Units of Measure - Degrees Fahrenheit
      - MIN_TEMPERATURE - Units of Measure - Degrees Fahrenheit
 
-### Exploratory Data Analysis
+## Exploratory Data Analysis
+### Data Cleaning
 
-### Hypothesis Testing
+#### Null Values
+Null Values table. 
 
-### Predictive Modeling
+Weather Forwarding fill
 
-### Results
+#### Invalid Data
 
-### Future Work
+
+## Hypothesis Testing
+
+## Predictive Modeling
+
+## Results
+
+## Future Work
   Integrate different event data as features into the model  
   Explore different models for Downtown Austin, UT Austin, South Congress  
   Present to City of Austin Transportation Department  
   Using hourly weather data for future modeling
    
-### Acknowledgments
+## Acknowledgments
   City of Austin Transportation Department  
   Galvanize Instructors and Classmates of Galvanize Jan 2019 Cohort
 
