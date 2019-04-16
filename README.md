@@ -82,18 +82,30 @@ After Data Exploration it was evident that
 ## Predictive Modeling
 Traditional Time Series Models ARIMA-Moving Average, ARIMA-Auto Regressor, SARIMA, RandomForestRegressor and ADABoostRegressor models were used for doing the predictive modeling. All the models were run on the top 10 cells (regions) with most rides and with Mean Absolute Error as the error metric. I used Mean Absolute Error(MAE) as the error metric instead of Root Mean Square Error(RMSE) because RMSE gives relatively high weights to large errors which in my cases mostly were mostly related to the outliers.
 
+Performance of the models
+| Models | Mean Absolute Error (MAE) |
+| --- | --- |
+| ARIMA - Moving Average | 4.167 |
+| ARIMA - Auto Regressor | 4.172 |
+| SARIMA | 8.010 |
+| **RandomForestRegressor** | **3.863** |
+| AdaBoostRegressot | 4.680 |
+
+  
 RandomForestRegressor Feature importance
 <img src="output/Final/Presentation/Random_Forest_Predictions/Feature_Importance.png"
      alt="Feature Engineering"
      style="float: left; margin-right: 10px;" />
 
 ## Results
-RandomForestRegressor model performed best of all the models with Mean Absolute Error of 3.863
+RandomForestRegressor model performed best of all the models with Mean Absolute Error of **3.863**
 
 Graph slowing the actual values against prediction for a cell.
 <img src="output/Final/Presentation/Random_Forest_Predictions/Random_Forest_Predictions_Elephant_Room_014706_Dec01_Dec15.png"
      alt="ElephantRoom_014706_Predictions"
      style="float: left; margin-right: 10px;" />
+     
+From the above graph we can see the model did well in most cases was off during the peak utilization. Investigating the data I found the model was not performing well during the evening commuter hours. 
 
 ## Future Work
   Integrate different event data as features into the model  
