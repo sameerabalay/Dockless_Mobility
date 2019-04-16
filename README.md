@@ -149,7 +149,7 @@ Traditional Time Series Models ARIMA-Moving Average, ARIMA-Auto Regressor, SARIM
 | ARIMA - Moving Average | 4.167 |
 | ARIMA - Auto Regressor | 4.172 |
 | SARIMA | 8.010 |
-| *RandomForestRegressor* | *3.863* |
+| **RandomForestRegressor** | **3.863** |
 | AdaBoostRegressot | 4.680 |
 
   
