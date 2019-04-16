@@ -92,7 +92,7 @@ Daily RiderShip Summary
 <TODO> - Add more text
 Form Hypotheses about your defined problem by visually analyzing the data 
 Trips - UT Austin vs Downtown
-<img src="output/Final/Presentation/EDA/Daily_Ridership_Summary.png"
+<img src="output/Final/Presentation/EDA/Hour_Scooter_Downtown_UT.png"
      alt="Daily Ridership Summary"
      style="float: left; margin-right: 6px;" />
 
