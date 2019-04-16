@@ -52,9 +52,15 @@ Each trip has origin cell and destination cell id. Few of the important fields i
      - End Longitude 
 
 ##### Weather Data
+Aggregrated daily weather data was downloaded from NCEI recorded at Austin Bergstorm International Airport Weather Station. Full details of the fields are available at <a href="documents/Weather_GHCND_documentation.pdf">Weather_GHCND_documentation.pdf</a>Few of the important fields in the dataset:
 
-   
-   
+     - Date - Recorded Date
+     - Precipitation - Units of Measure -  inches
+     - Snow - Units of Measure - inches
+     - Avg_Daily_Wind_Speed - Units of Measure - mph
+     - AVG_TEMPERATURE - Units of Measure - Degrees Fahrenheit
+     - MAX_TEMPERATURE - Units of Measure - Degrees Fahrenheit
+     - MIN_TEMPERATURE - Units of Measure - Degrees Fahrenheit
 
 ### Exploratory Data Analysis
 
@@ -65,8 +71,11 @@ Each trip has origin cell and destination cell id. Few of the important fields i
 ### Results
 
 ### Future Work
- 
-
+  Integrate different event data as features into the model  
+  Explore different models for Downtown Austin, UT Austin, South Congress  
+  Present to City of Austin Transportation Department  
+  Using hourly weather data for future modeling
+   
 ### Acknowledgments
   City of Austin Transportation Department  
   Galvanize Instructors and Classmates of Galvanize Jan 2019 Cohort
