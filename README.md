@@ -3,9 +3,9 @@ Predict the number of scooter rides originating in a region(cell) in City of Aus
 
 
 ### Business Understanding
-
+->
 Micro-Mobility - Small, human or electric-powered transportation market forecasted by McKinsey report to be $200 - $300 billion dollar market by 2030 in United States alone has been on the rise. One of the main reason for this rise is attributed to the fact that traveling a short distance of 3 miles or less in many major U.S.cities is faster through e-scooters or bikes than driving a car or using a ride-sharing service. Because of the quick rise in trends and market share many cities are still in the midst of developing policies and regulations. Populus report highlighties three areas where majority of cities will focus policy and regulations on:
-
+<-
  > 1. Ensuring safety: What policies should be enacted to ensure the safety of riders and others using public space (e.g., streets and sidewalks)? What transportation planning and design modifications are possible to promote the safety of those
  using shared and personal micro-mobility options and others in the public right
  of way?
@@ -31,7 +31,10 @@ Daily Weather from National Centers for Environmental Information (NCEI) - Austi
 
 #### Data Format
 
-City of Austin transportation department updates their dockless mobility data every hour on their Open Data Portal. For aggregration purposes they created a citywide hexagonal grid(cell) with each edge of grid of length 500ft. Each grid is a cell with a unique id. Each trip has origin cell and destination cell id. Few of the important fields in the dataset :
+##### Dockless Mobility Data
+City of Austin transportation department updates their dockless mobility data every hour on their Open Data Portal. For aggregration purposes they created a citywide hexagonal grid(cell) with each edge of grid of length 500ft. Each grid is a cell with a unique id.  Full set of fields and description can be found at https://data.austintexas.gov/Transportation-and-Mobility/Dockless-Vehicle-Trips/7d8e-dm7r  
+  
+Each trip has origin cell and destination cell id. Few of the important fields in the dataset :
 
      - ID - Unique trip identifier
      - Device ID - Unique ID for the device used to complete the trip
@@ -47,8 +50,8 @@ City of Austin transportation department updates their dockless mobility data ev
      - End Latitude
      - End Longitude 
 
- Full set of fields and description can be found at https://data.austintexas.gov/Transportation-and-Mobility/Dockless-Vehicle-Trips/7d8e-dm7r
-   
+##### Weather Data
+
    
    
 
