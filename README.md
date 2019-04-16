@@ -14,7 +14,7 @@ City of Austin transportation IT staff agree that City of Austin is also focusin
 ## Technology and Software Packages
 <img src="documents/images/technology_stack.png"
      alt="Technology Stack"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 6px;" />
 
 ## Directory Structure
     * src - directory for all the code
@@ -68,23 +68,48 @@ Null Values table.
 
 Weather Forwarding fill
 
-#### Invalid Data
+#### Outliers and Invalid Data
 
+Trip Duration 
+<img src="output/Final/Presentation/EDA/Trip_Duration_Log_Scale_Summary.png"
+     alt="Trip Duration Summary"
+     style="float: left; margin-right: 6px;" />
+
+Trip Distance
+<img src="output/Final/Presentation/EDA/Trip_Distance_Log_Scale_Summary.png"
+     alt="Trip Distance Summary"
+     style="float: left; margin-right: 6px;" />
+
+
+#### InConsistent Data
+Daily RiderShip Summary
+<img src="output/Final/Presentation/EDA/Daily_Ridership_Summary.png"
+     alt="Daily Ridership Summary"
+     style="float: left; margin-right: 6px;" />
 
 ## Data Exploration
 Form Hypotheses about your defined problem by visually analyzing the data 
+Trips - UT Austin vs Downtown
+<img src="output/Final/Presentation/EDA/Daily_Ridership_Summary.png"
+     alt="Daily Ridership Summary"
+     style="float: left; margin-right: 6px;" />
+     
+Trips, Precipitation, Temperature
+<img src="output/Final/Presentation/EDA/Ridership_Temperature_Precipitation_11_30_to_12_10_Screenshot.png"
+     alt="Ridership Temperature Precipitation"
+     style="float: left; margin-right: 6px;" />
+
 
 ## Feature Engineering
 After Data Exploration it was evident that having weather and time of the day are important features to add to the model. The following fields were added as features:  
 
      - Hour - Hour at which the ride originated. (0-23hrs)
      - Hour Label - Grouping of hours 
-          |Labe|Hours|
-          |Morning|Midnight-5:59am|
-          |Morning Commute|6am-9:59am|
-          |Afternoon|10am-2:59pm|
-          |Evening Commute|3pm-7:59pm|
-          |Night|8pm-11:59pm|
+          Morning - 12am-5:59am
+          Morning Commute - 6am-9:59am
+          Afternoon - 10am-2:59pm
+          Evening Commute - 3pm-7:59pm
+          Night - 8pm-11:59pm
      - Day of the Week - Monday(0), Tuesday(1), Wednesday(2), Thursday(3), Friday(4), Saturday(5), Sunday(6)
      - Week - Week of the year (0-51)
      - Weekday - Boolean (1 for Monday - Friday)
@@ -116,7 +141,7 @@ Traditional Time Series Models ARIMA-Moving Average, ARIMA-Auto Regressor, SARIM
 RandomForestRegressor Feature importance
 <img src="output/Final/Presentation/Random_Forest_Predictions/Feature_Importance.png"
      alt="Feature Engineering"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 6px;" />
 
 ## Results
 RandomForestRegressor model performed best of all the models with Mean Absolute Error of **3.863**
@@ -124,7 +149,7 @@ RandomForestRegressor model performed best of all the models with Mean Absolute 
 Graph slowing the actual values against prediction for a cell.
 <img src="output/Final/Presentation/Random_Forest_Predictions/Random_Forest_Predictions_Elephant_Room_014706_Dec01_Dec15.png"
      alt="ElephantRoom_014706_Predictions"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 6px;" />
      
 From the above graph we can see the model did well in most cases was off during the peak utilization. Investigating the data I found the model was not performing well during the evening commuter hours. 
 
