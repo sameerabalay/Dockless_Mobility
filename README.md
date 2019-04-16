@@ -3,7 +3,7 @@ Predict the number of scooter rides originating in a region(cell) in City of Aus
 
 
 ### Business Understanding
-<div class="align-center">
+<div class="text-justify">
 Micro-Mobility - Small, human or electric-powered transportation market forecasted by McKinsey report to be $200 - $300 billion dollar market by 2030 in United States alone has been on the rise. One of the main reason for this rise is attributed to the fact that traveling a short distance of 3 miles or less in many major U.S.cities is faster through e-scooters or bikes than driving a car or using a ride-sharing service. Because of the quick rise in trends and market share many cities are still in the midst of developing policies and regulations. Populus report highlighties three areas where majority of cities will focus policy and regulations on:
   
  > 1. Ensuring safety: What policies should be enacted to ensure the safety of riders and others using public space (e.g., streets and sidewalks)? What transportation planning and design modifications are possible to promote the safety of those
