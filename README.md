@@ -3,8 +3,6 @@ Predict the number of scooter rides originating in a region(cell) in City of Aus
 
 
 ### Business Understanding
-Dockless Mobility is forecasted to be a $200-$300 billion dollar industry in United States alone by 2030. 
-
 
 Micro-Mobility - Small, human or electric-powered transportation market forecasted by McKinsey report to be $200 - $300 billion dollar market by 2030 in United States alone has been on the rise. One of the main reason for this rise is attributed to the fact that traveling a short distance of 3 miles or less in many major U.S.cities is faster through e-scooters or bikes than driving a car or using a ride-sharing service. Because of the quick rise in trends and market share many cities are still in the midst of developing policies and regulations. Populus report highlighties three areas where majority of cities will focus policy and regulations on:
 
