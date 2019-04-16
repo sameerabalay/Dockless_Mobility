@@ -101,6 +101,16 @@ Trips, Precipitation, Temperature
 
 
 ## Feature Engineering
+Aggregrated Weekday Weekend RiderShip Summary
+<img src="output/Final/Presentation/EDA/Weekday_Weekend_Ridership.png"
+     alt="Weekday - Weekend Aggregrated Ridership Summary"
+     style="float: left; margin-right: 6px;" />
+
+Aggregrated Hourly RiderShip Summary
+<img src="output/Final/Presentation/EDA/Scooter_Ridership_Aggregration_By_Hour.png"
+     alt="Aggregrated Hourly Summary"
+     style="float: left; margin-right: 6px;" />
+
 After Data Exploration it was evident that having weather and time of the day are important features to add to the model. The following fields were added as features:  
 
      - Hour - Hour at which the ride originated. (0-23hrs)
