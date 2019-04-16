@@ -16,7 +16,7 @@ City of Austin transportation IT staff agree that City of Austin is also focusin
      alt="Technology Stack"
      style="float: left; margin-right: 10px;" />
 
-### Directory Structure
+## Directory Structure
     * src - directory for all the code
     * data - downloaded data (raw and cleaned)
     * output - results
@@ -71,11 +71,29 @@ Weather Forwarding fill
 #### Invalid Data
 
 
-## Hypothesis Testing
+## Data Exploration
+Form Hypotheses about your defined problem by visually analyzing the data 
+
+## Feature Engineering
+After Data Exploration it was evident that 
+
+
 
 ## Predictive Modeling
+Traditional Time Series Models ARIMA-Moving Average, ARIMA-Auto Regressor, SARIMA, RandomForestRegressor and ADABoostRegressor models were used for doing the predictive modeling. All the models were run on the top 10 cells (regions) with most rides and with Mean Absolute Error as the error metric. I used Mean Absolute Error(MAE) as the error metric instead of Root Mean Square Error(RMSE) because RMSE gives relatively high weights to large errors which in my cases mostly were mostly related to the outliers.
+
+RandomForestRegressor Feature importance
+<img src="output/Final/Presentation/Random_Forest_Predictions/Feature_Importance.png"
+     alt="Feature Engineering"
+     style="float: left; margin-right: 10px;" />
 
 ## Results
+RandomForestRegressor model performed best of all the models with Mean Absolute Error of 3.863
+
+Graph slowing the actual values against prediction for a cell.
+<img src="output/Final/Presentation/Random_Forest_Predictions/Random_Forest_Predictions_Elephant_Room_014706_Dec01_Dec15.png"
+     alt="ElephantRoom_014706_Predictions"
+     style="float: left; margin-right: 10px;" />
 
 ## Future Work
   Integrate different event data as features into the model  
@@ -87,7 +105,7 @@ Weather Forwarding fill
   City of Austin Transportation Department  
   Galvanize Instructors and Classmates of Galvanize Jan 2019 Cohort
 
-### References
+## References
 <a href = "documents/Populus_MicroMobility_2018_Jul.pdf">Populus Report</a>  
 <a href="https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/micromobilitys-15000-mile-checkup">McKinsey Report</a>  
 https://www.microsoft.com/en-us/research/wp-content/uploads/2016/07/mobisys16bike.pdf  
