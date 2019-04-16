@@ -69,12 +69,12 @@ Null Values table.
 Weather Forwarding fill
 
 #### Outliers and Invalid Data
-
+<TODO> - Add more text
 Trip Duration 
 <img src="output/Final/Presentation/EDA/Trip_Duration_Log_Scale_Summary.png"
      alt="Trip Duration Summary"
      style="float: left; margin-right: 6px;" />
-
+<TODO> - Add more text
 Trip Distance
 <img src="output/Final/Presentation/EDA/Trip_Distance_Log_Scale_Summary.png"
      alt="Trip Distance Summary"
@@ -82,18 +82,21 @@ Trip Distance
 
 
 #### InConsistent Data
+<TODO> - Add more text
 Daily RiderShip Summary
 <img src="output/Final/Presentation/EDA/Daily_Ridership_Summary.png"
      alt="Daily Ridership Summary"
      style="float: left; margin-right: 6px;" />
 
 ## Data Exploration
+<TODO> - Add more text
 Form Hypotheses about your defined problem by visually analyzing the data 
 Trips - UT Austin vs Downtown
 <img src="output/Final/Presentation/EDA/Daily_Ridership_Summary.png"
      alt="Daily Ridership Summary"
      style="float: left; margin-right: 6px;" />
-     
+
+<TODO> - Add more text     
 Trips, Precipitation, Temperature
 <img src="output/Final/Presentation/EDA/Ridership_Temperature_Precipitation_11_30_to_12_10_Screenshot.png"
      alt="Ridership Temperature Precipitation"
@@ -101,11 +104,13 @@ Trips, Precipitation, Temperature
 
 
 ## Feature Engineering
+<TODO> - Add more text
 Aggregrated Weekday Weekend RiderShip Summary
 <img src="output/Final/Presentation/EDA/Weekday_Weekend_Ridership.png"
      alt="Weekday - Weekend Aggregrated Ridership Summary"
      style="float: left; margin-right: 6px;" />
 
+<TODO> - Add more text
 Aggregrated Hourly RiderShip Summary
 <img src="output/Final/Presentation/EDA/Scooter_Ridership_Aggregration_By_Hour.png"
      alt="Aggregrated Hourly Summary"
