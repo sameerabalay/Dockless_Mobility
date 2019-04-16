@@ -1,24 +1,6 @@
 import pandas as pd
 from prettytable import PrettyTable
 
-def createDummies(df, columns_to_dummy):
-    '''
-    Takes a list of columns to dummy and creates the dummies 
-        and drops the original columns
-        Arguments:
-            df (pandas DataFrame): DataFrame to dummify the columns
-            columns_to_dummy (string list):    Columns to dummified
-        Returns:
-        Nothing
-    """
-    '''
-
-
-    for column in columns_to_dummy:
-        dummies = pd.get_dummies(df[column])
-        df[dummies.columns] = dummies
-        df.drop(column, axis =1, inplace=True)
-
 def print_eda_stats(df, column_list, table_title=""):
     '''
     Takes a list of columns to print summary statistics 

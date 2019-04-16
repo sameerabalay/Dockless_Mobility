@@ -1,12 +1,13 @@
 import pandas as pd
 import datetime as dt
 
+from eda_utilities import print_eda_stats
+
 def dockless_data_pipeline(data):
     '''
     Take a pandas dataframe and construct the data as part of the pipeline for dockless scooter data
         Arguments:
             data (pandas DataFrame): DataFrame used for the data pipeline
-            columns_to_drop (string list):    Columns to drop from the dataframe
         Returns:
             pandas dataframe with the dropped columns
     """
@@ -60,10 +61,9 @@ def dockless_data_pipeline(data):
 
 def weather_data_pipeline(data):
     '''
-    TTake a pandas dataframe and construct the data as part of the pipeline for austin weather data
+    Take a pandas dataframe and construct the data as part of the pipeline for austin weather data
         Arguments:
             data (pandas DataFrame): DataFrame used for the data pipeline
-            columns_to_drop (string list):    Columns to drop from the dataframe
         Returns:
             pandas dataframe with the dropped columns
     """
@@ -103,6 +103,17 @@ def weather_data_pipeline(data):
     return data
 
 def find_top_group_by_column_list(data, group_by_column, sort_by_column, agg_column, n=10):
+    '''
+    Take a pandas dataframe and returns the top(n) cells grouped by the parameters passed
+        Arguments:
+            data (pandas DataFrame): DataFrame used for the data pipeline
+            group_by_column: Column used for grouping the dataframe
+            sort_by_column: Column used for sorting the grouped dataframe
+            agg_column: Column used to aggregrate the dataframe.
+        Returns:
+            list of top ten cells ids information
+    """
+    '''
     grouped_origin_cell_id = data.groupby([group_by_column]).agg(agg_column)
     grouped_origin_cell_id = grouped_origin_cell_id.sort_values([sort_by_column], ascending=False)
     top_origin_cell_ids = grouped_origin_cell_id[sort_by_column]
@@ -114,14 +125,32 @@ def find_top_group_by_column_list(data, group_by_column, sort_by_column, agg_col
     return top_10_origin_cells_list
 
 def remove_invalid_trips(dockless_data):
+    '''
+    Take a pandas dataframe and returns data with Trip Distance between 160.934 - 804673 meters 
+    and Trip Duration between 60seconds  - 24hrs
+        Arguments:
+            data (pandas DataFrame): DataFrame used for the data pipeline
+        Returns:
+            pandas dataframe a subset of data by removing the outlier and invalid data
+    """
+    '''
     dockless_data = dockless_data[(dockless_data['Trip Distance'] > 160.934) & (dockless_data['Trip Distance'] < 804673)]
     dockless_data = dockless_data[(dockless_data['Trip Duration'] > 60) & (dockless_data['Trip Duration'] < 86400)]
     return dockless_data
 
 def prepare_cell_data(dockless_data, weather_data, cell_id):
+    '''
+    Take a dockless scooter and weather data frame and returns the dataframe for modeling for the cell_id passed
+        Arguments:
+            dockless_data (pandas DataFrame): Dockless Scooter DataFrame
+            weather_data (pandas DataFrame): Weather DataFrame
+            cell_id:  The origin_cell_id used for retrieving the information for modeling
+        Returns:
+            pandas dataframe for the cell_id passed
+    """
+    '''
     origin_cell_data = dockless_data[['Origin Cell ID', 'count']]
 
-    # Hardcoded Cell ID '014391'
     ind_cell_data = origin_cell_data[origin_cell_data['Origin Cell ID'] == cell_id]
 
     trip_counts_cell = ind_cell_data.groupby([ind_cell_data.index.get_level_values(0),'Origin Cell ID']).count()
@@ -130,7 +159,7 @@ def prepare_cell_data(dockless_data, weather_data, cell_id):
 
     # # Make a regular dataframe for processing the Time Series
     t2 = trip_counts_cell.reset_index()['count']
-    # Hardcoded Cell ID '014391'
+
     counts = t2[cell_id].values
     data = {'Start Time':trip_counts_cell.index.values, 'Trip Counts':counts} 
     trip_counts_cell_data = pd.DataFrame(data)
