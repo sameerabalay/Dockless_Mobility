@@ -23,7 +23,7 @@ City of Austin transportation IT staff agree that City of Austin is also focusin
     * documents - documents used for analysis and research
     
 ## Data Sources
-City of Austin Open Data Portal Dockless Mobility Data 
+City of Austin Open Data Portal Dockless Mobility Data   
 Daily Weather from National Centers for Environmental Information (NCEI) - Austin Bergstrom Airport Weather Station
 
 ### Data Format
@@ -82,35 +82,49 @@ Trip Distance
 
 
 #### InConsistent Data
-<TODO> - Add more text
+From the graph below you can see the rides from April 28th - May 18th are zero. Investigating in the data I found there was a trial period and the rides and companies participating picked up after July 15th. To accommodate for a consistent trend I used data from July 15th - Jan 15th for this project. 
 Daily RiderShip Summary
 <img src="output/Final/Presentation/EDA/Daily_Ridership_Summary.png"
      alt="Daily Ridership Summary"
      style="float: left; margin-right: 6px;" />
 
 ## Data Exploration
-<TODO> - Add more text
-Form Hypotheses about your defined problem by visually analyzing the data 
+Further exploration of the data revealed that the total rides and hours at which the rides happen are veru different from UT Austin to Downtown Austin. The graph below confirms it. 
+
 Trips - UT Austin vs Downtown
 <img src="output/Final/Presentation/EDA/Hour_Scooter_Downtown_UT.png"
      alt="Daily Ridership Summary"
      style="float: left; margin-right: 6px;" />
+     
+Chi-Squared test for the hourly usage patterns between UT Austin and Downtown revealed the following the results. The chi-square independence test is a procedure for testing if two categorical variables are related in some population.
 
-<TODO> - Add more text     
+Null Hypothesis H_0: 
+  
+Chi-Square Contigency Table - Aggregrate Rides  
+
+|Location| Morning Rides| Morning Commute| Afternoon  | Evening Commute | Night |
+|658 | 3690| 17517| 12984| 3660|
+|184 | 5028| 12787| 5527| 1486|
+
+Test Statistic - 2371.138, p-Value(4 degrees of freedom) (critical Value - 9.488 with 0.05 Significance level)  
+Statistic 2371.138 > Critical Value of 9.488 so reject the null hypothesis  
+
+Graphing the total number of rides vs Precipitation and Temperature reveals the weather has an impact on the scooter rides.   
 Trips, Precipitation, Temperature
 <img src="output/Final/Presentation/EDA/Ridership_Temperature_Precipitation_11_30_to_12_10_Screenshot.png"
      alt="Ridership Temperature Precipitation"
      style="float: left; margin-right: 6px;" />
 
+Doing a two sample T-Test on Downtown Congress and 6th Street cell data between '2018-12-06' and '2018-12-08' where precipitation was high vs between '2018-12-02' and '2018-12-04' revealed a test statistic of -2.74916. with p-value of 0.0071 with significance level of 0.05 so we reject the null hypothesis.
 
 ## Feature Engineering
-<TODO> - Add more text
+Reviewing the graph below we can infer that the rides are very different in weekend and weekday
 Aggregrated Weekday Weekend RiderShip Summary
 <img src="output/Final/Presentation/EDA/Weekday_Weekend_Ridership.png"
      alt="Weekday - Weekend Aggregrated Ridership Summary"
      style="float: left; margin-right: 6px;" />
 
-<TODO> - Add more text
+The graph below also illustrates the hour of the day has an impact on the total number of rides in a hour.
 Aggregrated Hourly RiderShip Summary
 <img src="output/Final/Presentation/EDA/Scooter_Ridership_Aggregration_By_Hour.png"
      alt="Aggregrated Hourly Summary"
