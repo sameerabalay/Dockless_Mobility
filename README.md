@@ -64,17 +64,22 @@ Few of the important fields in the dataset:
 ### Data Cleaning
 
 #### Null Values
-Null Values table. 
+Scooter Data had few null values and in most cases the null values were fields that were required for the modeling like Origin and Destination latitude and longitude and Origin and Destination Cells
 
-Weather Forwarding fill
+<img src="output/Final/Presentation/EDA/Null_Values_Scooter_Data.png"
+     alt="Trip Distance Summary"
+     style="float: left; margin-right: 6px;" />
+
+Weather data downloaded had only one null values for temperature which was forward-filled for analysis
 
 #### Outliers and Invalid Data
-<TODO> - Add more text
+The Trip Duration ranged from -431.0 seconds to 1888695.0 seconds which definitely had lot of invalid values. These could be attributed to the failed machinery with the scooters. For the project only trips with durations from 1min to 24hrs were used.
 Trip Duration 
 <img src="output/Final/Presentation/EDA/Trip_Duration_Log_Scale_Summary.png"
      alt="Trip Duration Summary"
      style="float: left; margin-right: 6px;" />
-<TODO> - Add more text
+
+Trip Distances ranged from -16724106.0 meters to 2147479547.0 meters but for the project only trips which had trip duration from 0.1 miles to 10 miles where used.
 Trip Distance
 <img src="output/Final/Presentation/EDA/Trip_Distance_Log_Scale_Summary.png"
      alt="Trip Distance Summary"
