@@ -103,19 +103,19 @@ Trips - UT Austin vs Downtown
      
 Chi-Squared test for the hourly usage patterns between UT Austin and Downtown revealed the following the results. The chi-square independence test is a procedure for testing if two categorical variables are related in some population.
 
-Null Hypothesis H_0: 
-  
+
 Chi-Square Contigency Table - Aggregrate Rides  
 
 |Location| Morning Rides| Morning Commute| Afternoon  | Evening Commute | Night |
 | --- | --- | --- | --- | --- | --- |
 |Downtown - Cell ID(014707) |658 | 3690| 17517| 12984| 3660|
 |UT Austin - Cell ID (015029)|184 | 5028| 12787| 5527| 1486|
-
+  
 Test Statistic - 2371.138, p-Value(4 degrees of freedom) (critical Value - 9.488 with 0.05 Significance level)  
 Statistic 2371.138 > Critical Value of 9.488 so reject the null hypothesis  
 
-Graphing the total number of rides vs Precipitation and Temperature reveals the weather has an impact on the scooter rides.   
+Graphing the total number of rides vs Precipitation and Temperature reveals the weather has an impact on the scooter rides.     
+  
 Trips, Precipitation, Temperature
 <img src="output/EDA/Ridership_Temperature_Precipitation_11_30_to_12_10_Screenshot.png"
      alt="Ridership Temperature Precipitation"
