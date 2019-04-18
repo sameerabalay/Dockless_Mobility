@@ -66,7 +66,7 @@ Few of the important fields in the dataset:
 #### Null Values
 Scooter Data had few null values and in most cases the null values were fields that were required for the modeling like Origin and Destination latitude and longitude and Origin and Destination Cells
 
-<img src="output/Final/Presentation/EDA/Null_Values_Scooter_Data.png"
+<img src="output/EDA/Null_Values_Scooter_Data.png"
      alt="Trip Distance Summary"
      style="float: left; margin-right: 6px;" />
 
@@ -81,7 +81,7 @@ Trip Duration
 
 Trip Distances ranged from -16724106.0 meters to 2147479547.0 meters but for the project only trips which had trip duration from 0.1 miles to 10 miles where used.
 Trip Distance
-<img src="output/Final/Presentation/EDA/Trip_Distance_Log_Scale_Summary.png"
+<img src="output/EDA/Trip_Distance_Log_Scale_Summary.png"
      alt="Trip Distance Summary"
      style="float: left; margin-right: 6px;" />
 
@@ -89,7 +89,7 @@ Trip Distance
 #### InConsistent Data
 From the graph below you can see the rides from April 28th - May 18th are zero. Investigating in the data I found there was a trial period and the rides and companies participating picked up after July 15th. To accommodate for a consistent trend I used data from July 15th - Jan 15th for this project. 
 Daily RiderShip Summary
-<img src="output/Final/Presentation/EDA/Daily_Ridership_Summary.png"
+<img src="output/EDA/Daily_Ridership_Summary.png"
      alt="Daily Ridership Summary"
      style="float: left; margin-right: 6px;" />
 
@@ -97,7 +97,7 @@ Daily RiderShip Summary
 Further exploration of the data revealed that the total rides and hours at which the rides happen are veru different from UT Austin to Downtown Austin. The graph below confirms it. 
 
 Trips - UT Austin vs Downtown
-<img src="output/Final/Presentation/EDA/Hour_Scooter_Downtown_UT.png"
+<img src="output/EDA/Hour_Scooter_Downtown_UT.png"
      alt="Daily Ridership Summary"
      style="float: left; margin-right: 6px;" />
      
@@ -116,7 +116,7 @@ Statistic 2371.138 > Critical Value of 9.488 so reject the null hypothesis
 
 Graphing the total number of rides vs Precipitation and Temperature reveals the weather has an impact on the scooter rides.   
 Trips, Precipitation, Temperature
-<img src="output/Final/Presentation/EDA/Ridership_Temperature_Precipitation_11_30_to_12_10_Screenshot.png"
+<img src="output/EDA/Ridership_Temperature_Precipitation_11_30_to_12_10_Screenshot.png"
      alt="Ridership Temperature Precipitation"
      style="float: left; margin-right: 6px;" />
 
@@ -125,13 +125,13 @@ Doing a two sample T-Test on Downtown Congress and 6th Street cell data between 
 ## Feature Engineering
 Reviewing the graph below we can infer that the rides are very different in weekend and weekday
 Aggregrated Weekday Weekend RiderShip Summary
-<img src="output/Final/Presentation/EDA/Weekday_Weekend_Ridership.png"
+<img src="output/EDA/Weekday_Weekend_Ridership.png"
      alt="Weekday - Weekend Aggregrated Ridership Summary"
      style="float: left; margin-right: 6px;" />
 
 The graph below also illustrates the hour of the day has an impact on the total number of rides in a hour.
 Aggregrated Hourly RiderShip Summary
-<img src="output/Final/Presentation/EDA/Scooter_Ridership_Aggregration_By_Hour.png"
+<img src="output/EDA/Scooter_Ridership_Aggregration_By_Hour.png"
      alt="Aggregrated Hourly Summary"
      style="float: left; margin-right: 6px;" />
 
@@ -173,7 +173,7 @@ Traditional Time Series Models ARIMA-Moving Average, ARIMA-Auto Regressor, SARIM
 
   
 RandomForestRegressor Feature importance
-<img src="output/Final/Presentation/Random_Forest_Predictions/Feature_Importance.png"
+<img src="output/Random_Forest_Predictions/Feature_Importance.png"
      alt="Feature Engineering"
      style="float: left; margin-right: 6px;" />
 
@@ -181,7 +181,7 @@ RandomForestRegressor Feature importance
 RandomForestRegressor model performed best of all the models with Mean Absolute Error of **3.863**
 
 Graph slowing the actual values against prediction for a cell.
-<img src="output/Final/Presentation/Random_Forest_Predictions/Random_Forest_Predictions_Elephant_Room_014706_Dec01_Dec15.png"
+<img src="output/Random_Forest_Predictions/Random_Forest_Predictions_Elephant_Room_014706_Dec01_Dec15.png"
      alt="ElephantRoom_014706_Predictions"
      style="float: left; margin-right: 6px;" />
      
