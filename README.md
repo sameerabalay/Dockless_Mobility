@@ -75,7 +75,7 @@ Weather data downloaded had only one null values for temperature which was forwa
 #### Outliers and Invalid Data
 The Trip Duration ranged from -431.0 seconds to 1888695.0 seconds which definitely had lot of invalid values. These could be attributed to the failed machinery with the scooters. For the project only trips with durations from 1min to 24hrs were used.
 Trip Duration 
-<img src="output/Final/Presentation/EDA/Trip_Duration_Log_Scale_Summary.png"
+<img src="output/EDA/Trip_Duration_Log_Scale_Summary.png"
      alt="Trip Duration Summary"
      style="float: left; margin-right: 6px;" />
 
