@@ -108,8 +108,9 @@ Null Hypothesis H_0:
 Chi-Square Contigency Table - Aggregrate Rides  
 
 |Location| Morning Rides| Morning Commute| Afternoon  | Evening Commute | Night |
-|658 | 3690| 17517| 12984| 3660|
-|184 | 5028| 12787| 5527| 1486|
+| --- | --- | --- | --- | --- | --- |
+|Downtown - Cell ID(014707) |658 | 3690| 17517| 12984| 3660|
+|UT Austin - Cell ID (015029)|184 | 5028| 12787| 5527| 1486|
 
 Test Statistic - 2371.138, p-Value(4 degrees of freedom) (critical Value - 9.488 with 0.05 Significance level)  
 Statistic 2371.138 > Critical Value of 9.488 so reject the null hypothesis  
