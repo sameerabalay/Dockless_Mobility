@@ -104,10 +104,10 @@ Trips - UT Austin vs Downtown
      
 Chi-Squared test for the hourly usage patterns between UT Austin and Downtown revealed the following the results. The chi-square independence test is a procedure for testing if two categorical variables are related in some population.
 
-
 Chi-Square Contigency Table - Aggregrate Rides  
 
-|Location| Morning Rides| Morning Commute| Afternoon  | Evening Commute | Night |
+|Location| Morning Rides| Morning Commute| Afternoon     | Evening Commute | Night |
+|        | 12am - 5:59am| 6am - 9:59am   | 10am - 2:59pm | 3pm - 7:59pm    | 8pm - 11:59pm|
 | --- | --- | --- | --- | --- | --- |
 |Downtown - Cell ID(014707) |658 | 3690| 17517| 12984| 3660|
 |UT Austin - Cell ID (015029)|184 | 5028| 12787| 5527| 1486|
