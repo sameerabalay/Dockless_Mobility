@@ -112,7 +112,7 @@ Chi-Squared test for the hourly usage patterns between UT Austin and Downtown re
 
 Chi-Square Contigency Table - Aggregrate Rides  
 
-|Location| Morning Rides| Morning Commute| Afternoon | Evening Commute | Night |
+|Location| Morning Rides| Morning Commute Rides | Afternoon Rides | Evening Commute Rides | Night Rides |
 | --- | --- | --- | --- | --- | --- |
 |Downtown - Cell ID(014707) |658 | 3690| 17517| 12984| 3660|
 |UT Austin - Cell ID (015029)|184 | 5028| 12787| 5527| 1486|
