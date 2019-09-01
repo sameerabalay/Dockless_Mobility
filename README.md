@@ -88,14 +88,14 @@ Trip Distance
 
 
 #### InConsistent Data
-From the graph below you can see the rides from April 28th - May 18th are zero. Investigating in the data I found there was a trial period and the rides and companies participating picked up after July 15th. To accommodate for a consistent trend I used data from July 15th - Jan 15th for this project. 
+From the graph below you can see the rides from April 28th - May 18th are zero, further investigating I found there was a trial period and the rides and companies participating picked up after July 15th. To accommodate for a consistent trend I used data from July 15th - Jan 15th for this project. 
 Daily RiderShip Summary
 <img src="output/EDA/Daily_Ridership_Summary.png"
      alt="Daily Ridership Summary"
      style="float: left; margin-right: 6px;" />
 
 ## Data Exploration
-Further exploration of the data revealed that the total rides and hours at which the rides happen are veru different from UT Austin to Downtown Austin. The graph below confirms it. 
+Further exploration of the data revealed that the total rides and hours at which the rides happen are very different from UT Austin to Downtown Austin. The graph below confirms it. 
 
 Trips - UT Austin vs Downtown
 <img src="output/EDA/Hour_Scooter_Downtown_UT.png"
