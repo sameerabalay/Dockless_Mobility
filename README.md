@@ -142,7 +142,7 @@ Aggregrated Hourly RiderShip Summary
      alt="Aggregrated Hourly Summary"
      style="float: left; margin-right: 6px;" />
 
-After Data Exploration it was evident that having weather and time of the day are important features to add to the model. The following fields were added as features:  
+After the data exploration it was evident that having weather and time of the day are important features to add to the model. To get a better prediction model the following fields were added as features:  
 
      - Hour - Hour at which the ride originated. (0-23hrs)
      - Hour Label - Grouping of hours 
