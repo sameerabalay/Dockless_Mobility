@@ -192,7 +192,8 @@ Graph slowing the actual values against prediction for a cell.
      alt="ElephantRoom_014706_Predictions"
      style="float: left; margin-right: 6px;" />
      
-From the above graph we can see the model did well in most cases was off during the peak utilization. Investigating the data I found the model was not performing well during the evening commuter hours. 
+From the above graph we can see the model did well in most cases and was off during the peak utilization. Investigating the data I found the model was not performing well during the evening commuter hours. Usage patterns might be different during the evening commute hours because of the numerous music events and food venues downtown Austin has to offer.
+
 
 ## Future Work
   Integrate different event data as features into the model  
