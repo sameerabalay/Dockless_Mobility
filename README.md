@@ -166,7 +166,7 @@ After the data exploration it was evident that having weather and time of the da
      - MIN_TEMPERATURE - Units of Measure in Degrees Fahrenheit
 
 ## Predictive Modeling
-Traditional Time Series Models ARIMA-Moving Average, ARIMA-Auto Regressor, SARIMA, RandomForestRegressor and ADABoostRegressor models were used for doing the predictive modeling. All the models were run on the top 10 cells (regions) with most rides and with Mean Absolute Error as the error metric. I used Mean Absolute Error(MAE) as the error metric instead of Root Mean Square Error(RMSE) because RMSE gives relatively high weights to large errors which in my cases mostly were mostly related to the outliers.
+Traditional Time Series Models ARIMA-Moving Average, ARIMA-Auto Regressor, SARIMA and RandomForestRegressor and ADABoostRegressor models were used for doing the predictive modeling. All the models were run on the top 10 cells (regions) with most rides and the error metric used was Mean Absolute Error. I used Mean Absolute Error(MAE) as the error metric instead of Root Mean Square Error(RMSE) because RMSE gives relatively high weights to large errors which in my cases were mostly related to the outliers.
 
 **Performance of the models**
   
