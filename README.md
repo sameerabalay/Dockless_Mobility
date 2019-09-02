@@ -130,8 +130,8 @@ Trips, Precipitation, Temperature
 Doing a two sample T-Test on Downtown Congress and 6th Street cell data between '2018-12-06' and '2018-12-08' where precipitation was high vs between '2018-12-02' and '2018-12-04' revealed a test statistic of -2.74916. with p-value of 0.0071 with significance level of 0.05 so we reject the null hypothesis.
 
 ## Feature Engineering
-Reviewing the graph below we can infer that the rides are very different in weekend and weekday
-Aggregrated Weekday Weekend RiderShip Summary
+The graph below is the Aggregrated Weekday Weekend RiderShip Summary graph. Reviewing the graph below we can infer that the rides are very different in weekend and weekday.
+
 <img src="output/EDA/Weekday_Weekend_Ridership.png"
      alt="Weekday - Weekend Aggregrated Ridership Summary"
      style="float: left; margin-right: 6px;" />
